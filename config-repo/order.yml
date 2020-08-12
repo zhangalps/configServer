@@ -1,6 +1,0 @@
-config-client-server:
- port: 9202  
-env:
- dev
-server-config:
-  uFly-config-server
