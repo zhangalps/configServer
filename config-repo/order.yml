@@ -1,4 +1,4 @@
-server:
+config-client-server:
  port: 9102  
 env:
  dev
