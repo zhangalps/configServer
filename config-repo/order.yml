@@ -2,3 +2,5 @@ server:
  port: 9102  
 env:
  dev
+server-config:
+  uFly-config-server
