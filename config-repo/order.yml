@@ -1,5 +1,5 @@
 config-client-server:
- port: 9102  
+ port: 9202  
 env:
  dev
 server-config:
