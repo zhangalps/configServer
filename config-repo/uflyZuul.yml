@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: uFly-zuul
+server:
+  port: 9085
+
+ribbon:
+  eureka:
+    enabled: true
+zuul:
+  #  prefix: /api
+  routes:
+    traditional-url:                             #传统的路由配置,此名称可以自定义
+      path: /client/**                           #映射的url
+      url: http://localhost:9083/           #被映射的url
+    orient-service-url:                       #面向服务的路由配置,此名称可以自定义
+      path: /uflyRequest/**
+      service-id: uflying-request-manager           #服务名
