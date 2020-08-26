@@ -17,7 +17,10 @@ zuul:
 #      url: http://localhost:9083/           #被映射的url
     user-manage:                       #用户中心
       path: /api-u/**
+      sensitiveHeaders:
       service-id: uFly-user-server           #服务名
     oauth:                       #认证中心
       path: /api-o/**
+      sensitiveHeaders:
       service-id: uFly-oauth-server          #服务名
+  add-proxy-headers: true
