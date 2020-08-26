@@ -12,9 +12,12 @@ ribbon:
 zuul:
   #  prefix: /api
   routes:
-    traditional-url:                             #传统的路由配置,此名称可以自定义
-      path: /client/**                           #映射的url
-      url: http://localhost:9083/           #被映射的url
-    orient-service-url:                       #面向服务的路由配置,此名称可以自定义
-      path: /uflyRequest/**
-      service-id: uflying-request-manager           #服务名
+#    traditional-url:                             #传统的路由配置,此名称可以自定义
+#      path: /client/**                           #映射的url
+#      url: http://localhost:9083/           #被映射的url
+    user-manage:                       #用户中心
+      path: /api-u/**
+      service-id: uFly-user-server           #服务名
+    oauth:                       #认证中心
+      path: /api-o/**
+      service-id: uFly-config-server          #服务名
