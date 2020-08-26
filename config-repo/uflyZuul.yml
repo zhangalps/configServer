@@ -11,9 +11,8 @@ zuul:
   max:
    host:
     connections: 500
-  host:
-   socket-timeout-millis: 60000
-   connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
   #  prefix: /api
   routes:
 #    traditional-url:                             #传统的路由配置,此名称可以自定义
