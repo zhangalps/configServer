@@ -20,4 +20,4 @@ zuul:
       service-id: uFly-user-server           #服务名
     oauth:                       #认证中心
       path: /api-o/**
-      service-id: uFly-config-server          #服务名
+      service-id: uFly-oauth-server          #服务名
