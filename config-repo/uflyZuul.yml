@@ -8,9 +8,7 @@ server:
 
 
 zuul:
-  max:
-   host:
-    connections: 500
+  host:
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
   #  prefix: /api
@@ -29,18 +27,17 @@ zuul:
   add-proxy-headers: true
 
 ribbon:
-   ReadTimeout: 10000
-   ConnectTimeout: 10000
-   MaxAutoRetries: 0
-   MaxAutoRetriesNextServer: 1
-   eureka:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  eureka:
     enabled: true
+
 hystrix:
-    command:
-     default:
+  command:
+    default:
       execution:
-       timeout:
-        enabled: true
-         isolation:
+        isolation:
           thread:
-           timeoutInMilliseconds: 60000
+            timeoutInMilliseconds: 60000
