@@ -24,6 +24,10 @@ zuul:
       path: /api-o/**
       sensitiveHeaders:
       service-id: uFly-oauth-server          #服务名
+    fly-area: #空域管理
+      path: /area-a/**
+      sensitiveHeaders:
+      service-id: uFly-area-server
   add-proxy-headers: true
 
 ribbon:
