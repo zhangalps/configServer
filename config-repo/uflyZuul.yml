@@ -20,17 +20,14 @@ zuul:
       path: /api-u/**
       sensitiveHeaders:
       service-id: uFly-user-server           #服务名
-      strip-prefix: false
     oauth:                       #认证中心
       path: /api-o/**
       sensitiveHeaders:
       service-id: uFly-oauth-server          #服务名
-      strip-prefix: false
     fly-area: #空域管理
       path: /api-a/**
       sensitiveHeaders:
       service-id: uFly-area-server
-      strip-prefix: false
   add-proxy-headers: true
 
 ribbon:
@@ -39,7 +36,7 @@ ribbon:
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 1
   eureka:
-    enabled: true
+    enabled: false
 
 hystrix:
   command:
