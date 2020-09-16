@@ -7,41 +7,4 @@ server:
   port: 9085
 
 
-zuul:
-  host:
-    socket-timeout-millis: 60000
-    connect-timeout-millis: 60000
-  #  prefix: /api
-  routes:
-#    traditional-url:                             #传统的路由配置,此名称可以自定义
-#      path: /client/**                           #映射的url
-#      url: http://localhost:9083/           #被映射的url
-    user-manage:                       #用户中心
-      path: /api-u/**
-      sensitiveHeaders:
-      service-id: uFly-user-server           #服务名
-    oauth:                       #认证中心
-      path: /api-o/**
-      sensitiveHeaders:
-      service-id: uFly-oauth-server          #服务名
-    fly-area: #空域管理
-      path: /api-a/**
-      sensitiveHeaders:
-      service-id: uFly-area-server
-  add-proxy-headers: true
 
-ribbon:
-  ReadTimeout: 10000
-  ConnectTimeout: 10000
-  MaxAutoRetries: 0
-  MaxAutoRetriesNextServer: 1
-  eureka:
-    enabled: true
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
